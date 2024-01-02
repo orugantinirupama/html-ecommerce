@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore | Ecommerce website Design</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="index.js"></script> -->
+    <script>
+    function redirectToProductDesc(image, name, rating, price) {
+        // Encode special characters in the URL
+        const encodedName = encodeURIComponent(name);
+        // Redirect to productdesc.html with product details as query parameters
+        window.location.href = `productdesc.html?image=${image}&name=${encodedName}&rating=${rating}&price=${price}`;
+    }
+</script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.png" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </nav>
+                <img src="cart.png" width="25px" height="25px">
+                <img src="menu.png" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1> Give Your workout <br> A New Style</h1>
+                    <p>success isn't always about greatness. it's about consistency.
+                        Consistent hard work gains success. Greatness will come.
+                        <br><br>
+                    </p>
+                    <a href="" class="btn"> Explore Now &#x2192;</a>
+                </div>
+                <img id='basketball_pl' src="image1.png" >
+            </div>
+        </div>
+    </div>
+
+    <div class="categories">
+        <div class="smallcontainer">
+            <div class="row">
+                <div class="col-3">
+                    <img src="category-1.jpg" >
+                </div>
+                <div class="col-3">
+                    <img src="category-2.jpg" >
+                </div>
+                <div class="col-3">
+                    <img src="category-3.jpg" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-container">
+        <h2 class="title">Featured products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="product-1.jpg" onclick="redirectToProductDesc('product-1.jpg', 'Red printed T-shirt', 3, 50.00)">
+                <h4>Red printed T-shirt</h4>
+                <div class="rating">
+                    <img src="./star.svg" alt="">
+                    <img src="./star.svg" alt="">
+                    <img src="./star.svg" alt="">
+                    <img src="./emptystar.svg" alt="">
+                    <img src="./emptystar.svg" alt="">
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="product-2.jpg" onclick="redirectToProductDesc('product-2.jpg', 'Black Shoes', 3, 55.00)">
+                <h4>Black Shoes</h4>
+                <div class="rating">
+                    <img src="./star.svg" alt="">
+                    <img src="./star.svg" alt="">
+                    <img src="./star.svg" alt="">
+                    <img src="./emptystar.svg" alt="">
+                    <img src="./emptystar.svg" alt="">
+                </div>
+                <p>$55.00</p>
+            </div>
+            <!-- Add more product entries here -->
+        </div>
+    </div>
+
+    <div class="offer">
+        <div class="small-container">
+            <div class="row-watch">
+                <div class="col-2">
+                    <img src="exclusive.png" class="offer-img" >
+                </div>
+                <div class="col-2 dis" >
+                    <p>Exclusively available on Redstore </p>
+                    <h1>Smart Band 4</h1>
+                    <small>The Mi Smart Band 4 features a 40.0% larger (than Mi Band 3) AMOLED color 
+                        full-touch display with adjustable brightness.
+                    </small>
+                    <br><br>
+                    <a href="" class="btn"> Buy Now &#x2192;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="./quote.svg" height="80">
+                    <p>Fantastic, products are exact as mentioned on the website...!!!!
+                        <div class="rating">
+                            <img src="./star.svg" height="80">
+                            <img src="./star.svg" height="80">
+                            <img src="./star.svg" height="80">
+                            <img src="./star.svg" height="80">
+                            <img src="./star.svg" height="80">
+                        </div>
+                    </p>
+                    <img src="user-1.png" alt="">
+                    <h3>Sean Parker</h3>
+                </div>
+                <!-- Add more testimonials here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="logo-godrej.png" >
+                </div>
+                <div class="col-5">
+                    <img src="logo-oppo.png" >
+                </div>
+                <!-- Add more brand logos here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile.</p>
+                     <div class="app-logo">
+                        <img src="play-store.png" alt="">
+                        <img src="app-store.png" alt="">
+                     </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="logo-white.png" >
+                    <p>Our purpose is to sustainably make the pleasure and benefits
+                        of Sport Accessible to the many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copy right">Copy right 2023 - Easy tutorials</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="productDetails"></div>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        function redirectToCheckout(image, name, rating, price) {
+            const encodedName = encodeURIComponent(name);
+            const productDetails = {
+                image: image,
+                name: encodedName,
+                rating: rating,
+                price: price
+            };
+
+            localStorage.setItem('productDetails', JSON.stringify(productDetails));
+            window.location.href = 'checkout.html';
+        }
+
+        function setProductDetails() {
+            var productDetails = document.getElementById("productDetails");
+            var image = getParameterByName("image");
+            var name = getParameterByName("name");
+            var rating = getParameterByName("rating");
+            var price = getParameterByName("price");
+
+            var imgElement = document.createElement("img");
+            imgElement.src = image;
+
+            var nameElement = document.createElement("h4");
+            nameElement.textContent = decodeURIComponent(name);
+
+            var ratingElement = document.createElement("div");
+            ratingElement.classList.add("rating");
+            for (var i = 0; i < rating; i++) {
+                var starElement = document.createElement("img");
+                starElement.src = "./star.svg";
+                ratingElement.appendChild(starElement);
+            }
+
+            var priceElement = document.createElement("p");
+            priceElement.textContent = "$" + price;
+
+            var buybutton = document.createElement('button')
+            buybutton.textContent = 'BUY';
+            buybutton.addEventListener('click', function () {
+                redirectToCheckout(image, name, rating, price);
+            });
+
+            productDetails.innerHTML = '';
+            productDetails.appendChild(imgElement);
+            productDetails.appendChild(nameElement);
+            productDetails.appendChild(ratingElement);
+            productDetails.appendChild(priceElement);
+            productDetails.appendChild(buybutton);
+        }
+
+        setProductDetails();
+    </script>
+</body>
+</html>

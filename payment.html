@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background: radial-gradient(#ffffff, #7f50a3);
+        }
+    </style>
+</head>
+<body>
+    <div id="payment_container">
+    <div id="productSummary"></div>
+    <div id="paymentoption">
+    <label for="paymentOption">Payment Option</label>
+    <select id="paymentOption">
+        <option value="COD">COD</option>
+        <option value="NetBanking">Net Banking</option>
+        <option value="UPI">UPI</option>
+        <option value="DebitCard">Debit Card</option>
+        <option value="CreditCard">Credit Card</option>
+    </select>
+    <button id="place_btn">Place Order</button>
+    </div>
+    </div>
+    <script>
+        var plbtn=document.getElementById('place_btn')
+        plbtn.addEventListener('click',function(){
+            alert("Order has been placed")
+            window.location.href='index.html'
+        })
+
+        function getProductDetails() {
+            var storedProductDetails = localStorage.getItem('productDetails');
+
+            if (storedProductDetails) {
+                return JSON.parse(storedProductDetails);
+            }
+
+            return null;
+        }
+
+        function setCheckoutDetails() {
+            var productSummary = document.getElementById("productSummary");
+            var paymentOption = document.getElementById("paymentOption");
+            
+            var storedDetails = getProductDetails();
+
+            if (storedDetails) {
+                productSummary.innerHTML += `<p><strong>Price:</strong> $${storedDetails.price}</p>`;
+            }
+        }
+
+        setCheckoutDetails();
+    </script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none ;
+}
+nav ul li{
+    display:inline-block ;
+    margin-right: 20px;
+
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    min-width: 130px;
+    margin: auto;
+    padding-block-end: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    width:100%;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+#basketball_pl{
+    width:45%;
+}
+.row img{
+    max-width: 100%;
+    padding: 30px 0;
+}
+.col-2 h1{
+    font-size:50px ;
+    line-height: 60px;
+    margin: 10px 0;
+}
+.btn{
+    display: inline;
+    background: #09020f;
+    color: #fff;
+    padding: 2px 10px;
+    margin: 30px 0;
+    border-radius: 10px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background:#563434;
+
+}
+.header{
+    background: radial-gradient(#ffffff,#7f50a3);
+
+}
+.header row{
+    margin-top: 50px;
+}
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+.small-conrainer{
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 20%;
+    padding: 10px;
+    min-width: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+
+}
+.col-4 img{
+    width:100%;
+
+
+}
+.rating{
+    display: flex;
+    /* justify-content: center; */
+}
+.title{
+    text-align: center;
+    margin: 0 auto 30px;
+    position: relative;
+    line-height: 45px;
+    color: #555
+}
+.title::after{
+    content: '';
+    background: #7f50a3;
+    width: 80px;
+    height: 5px;
+    border-radius: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    transform: translateX(-47);
+
+}
+.col-4:hover{
+    transform: translateY(-5px);
+
+}
+.offer-img{
+    width:80%;
+}
+
+.offer .row-watch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:auto 20vh;
+    
+}
+.offer{
+    background: radial-gradient(#ffffff,#7e2962);
+    margin-top: 80px;
+    padding: 40px 0;
+
+
+}
+small{
+    color: rgb(0, 0, 0);
+}
+/*----testimonial------*/
+.testimonial{
+    padding-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20;
+    box-shadow: 5px 10px 20px rgb(82, 15, 94) ;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%
+    
+    
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px)
+}
+.col-3 p{
+    font-size: 17px;
+    margin: 12px 0;
+    color : #000000;
+    font-family:'Times New Roman', Times, serif;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+/*------brands-----*/
+.brands{
+    margin: 100px auto;
+
+
+}
+.col-5{
+    width: 160px;
+}
+.col-5 img{
+    width: 100%;
+    cursor:pointer;
+    filter:grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+.footer{
+    background: #000000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color : #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 20%;
+}
+.footer-col-2{
+    flex-basis: 20%;
+    text-align: center;
+}
+.footer-col-2 img{
+    width:180px;
+    margin-bottom: 20px;
+}
+ul{
+    list-style-type: none;
+}
+.menu-icon{
+    width:28px;
+    margin-left: 20px;
+    display:none;
+}
+/*---- media query for menu---*/
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left:0;
+        background: #333;
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-top: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+#login,#register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Add these styles to your existing style.css file */
+
+#checkoutDetails {
+    background: radial-gradient(#ffffff, #7f50a3);
+    padding: 40px;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+#checkoutForm {
+    max-width: 600px;
+    margin: auto;
+}
+
+#checkoutForm label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#checkoutForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#productSummary {
+    margin-top: 20px;
+}
+
+#productSummary p {
+    margin-bottom: 10px;
+}
+
+#sub_button {
+    background: #09020f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+#sub_button:hover {
+    background: #563434;
+}
+
+/* Add these styles to your existing style.css file */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Set background color as needed */
+}
+
+#productDetails {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h4 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.rating img {
+    width: 20px; /* Adjust the size of the star images */
+    margin-right: 5px;
+}
+
+p {
+    color: #555;
+}
+
+button {
+    background: #09020f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+button:hover {
+    background: #563434;
+}
+/* Add these styles to your existing style.css file */
+
+/* Add these styles to your existing style.css file */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Set background color as needed */
+}
+
+
+
+#productSummary {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#paymentoption {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #09020f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+button:hover {
+    background: #563434;
+}
+
+
+
+
+
